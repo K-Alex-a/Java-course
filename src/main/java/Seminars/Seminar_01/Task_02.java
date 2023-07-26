@@ -1,5 +1,10 @@
 package Seminars.Seminar_01;
 
+import java.beans.PropertyEditorSupport;
+import java.io.FilterOutputStream;
+import java.util.Arrays;
+import java.util.Random;
+
 /*============================================================
 * Задание №2
 * Дан массив двоичных чисел, например [1,1,0,1,1,1,1], вывести
@@ -9,19 +14,33 @@ package Seminars.Seminar_01;
 ============================================================*/
 public class Task_02 {
     public static void main(String[] args) {
-        int[] new_array = new int[]{1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1};
+        int[] array = new int[20];
+        int value = 1;
+        fillMatrix(array);
+        int result = countingValues(array, value);
 
-        int count = 0;
-        int temp = 0;
-
-        for (int item : new_array) {
-            if (item == 1) {
-                count++;
-                if (temp < count) temp = count;
-            } else count = 0;
-        }
-
-        System.out.println(temp);
-
+        System.out.println(Arrays.toString(array));
+        System.out.println("Total '1' per line: " + result);
     }
+
+    public static int countingValues(int[] array, int value) {
+        int currentLength = 0;
+        int resultLength = 0;
+
+        for (int item : array) {
+            if (item == value) {
+                currentLength++;
+                if (resultLength < currentLength) resultLength = currentLength;
+            } else currentLength = 0;
+        }
+        return resultLength;
+    }
+
+    public static void fillMatrix(int[] array) {
+        Random rand = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = rand.nextInt(2);
+        }
+    }
+
 }
