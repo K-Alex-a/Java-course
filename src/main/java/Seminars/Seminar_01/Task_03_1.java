@@ -14,20 +14,20 @@ import java.util.Arrays;
 ==========================================================*/
 public class Task_03_1 {
     public static void main(String[] args) {
-        int[] nums = new int[]{3, 2, 1, 2, 4, 3, 5, 6, 3, 1, 3};
+        int[] nums = new int[]{3, 5, 1, 2, 4, 3, 5, 6, 3, 1, 3};
         int value = 3;
         int temp = 0;
 
 
         for (int item : nums) {
             if (item != value) {
-                nums[temp++] = item;
+                nums[temp++] = item;    // 'temp++' - сначала запишет, а потом увеличит temp на 1
                 System.out.println(Arrays.toString(nums));
             }
         }
         System.out.println();
 
-        for (int i = temp; i < nums.length; i++) {
+        for (int i = temp; i < nums.length; i++) {  // перезаписываем в конец столько значений, сколько найдено
             nums[i] = value;
             System.out.println(Arrays.toString(nums));
         }
