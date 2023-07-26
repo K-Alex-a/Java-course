@@ -14,8 +14,6 @@ package Seminars.Seminar_01;
 * "Добрый вечер, <Имя>!", если время от 18:00 до 22:59;
 * "Доброй ночи, <Имя>!", если время от 23:00 до 4:59
 =======================================================*/
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Scanner;
 
@@ -35,7 +33,7 @@ public class Task_01 {
 
     public static void time(String name) {
         LocalTime time = LocalTime.now();
-        if (time.isAfter(LocalTime.of(5, 0)) && time.isBefore(LocalTime.of(11, 59))) {     // если текущее время больше 5:00 утра
+        if (time.isAfter(LocalTime.of(5, 0)) && time.isBefore(LocalTime.of(11, 59))) {
             System.out.println("Good morning, " + name + "!");
         } else if (time.isAfter(LocalTime.of(12, 0)) && time.isBefore(LocalTime.of(17, 59))) {
             System.out.println("Good afternoon, " + name + "!");
