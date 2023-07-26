@@ -14,7 +14,7 @@ import java.util.Random;
 * [2,1,2,3,3]
 ==========================================================*/
 // My version:
-public class Task_03_3 {
+public class Task_03_2 {
     public static void main(String[] args) {
         int[] nums = new int[10];
         int value = 0;
