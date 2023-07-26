@@ -14,13 +14,13 @@ public class Task_05 {
         StringBuilder reverse_letters = new StringBuilder(phrase).reverse(); // переворачивает посимвольно
         System.out.println(reverse_letters);
 
-        String[] arrayPhrase = phrase.split(" ");               // перводим строку в массив строк
+        String[] arrayPhrase = phrase.split(" ");               // переводим строку в массив строк
         int length = (arrayPhrase.length / 2) + 1;              // режем длинну массива, чтобы менять текущий с начала и текущий с конца
-        int end_index = arrayPhrase.length - 1;                 // задаем инлекс с конца
+        int end_index = arrayPhrase.length - 1;                 // задаем индекс с конца
 
 
         for (int i = 0; i < length; i++, end_index--) {         // пока текущий индекс меньше половины массива
-            String temp = arrayPhrase[i];                       // перезаписываем жлемент с конца с тем что вначале
+            String temp = arrayPhrase[i];                       // перезаписываем элемент с конца с тем что вначале
             arrayPhrase[i] = arrayPhrase[end_index];
             arrayPhrase[end_index] = temp;
         }
