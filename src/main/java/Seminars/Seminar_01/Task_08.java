@@ -1,4 +1,5 @@
 package Seminars.Seminar_01;
+
 import java.util.Arrays;
 
 /*=============================================================
@@ -22,9 +23,8 @@ public class Task_08 {
     }
 
     public static boolean searchSumNum(int[] array, int value) {
-        boolean result = true;
         for (int i = 1; i < array.length; i++) {
-            if (array[i] + array[i-1] == value) return true;
+            if (array[i] + array[i - 1] == value) return true;
         }
         return false;
     }
