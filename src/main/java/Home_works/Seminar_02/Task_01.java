@@ -1,5 +1,7 @@
 package Home_works.Seminar_02;
+
 import java.util.Arrays;
+
 /*=======================================================================
 * Дана строка sql-запроса:
 * select * from students where "
@@ -25,12 +27,11 @@ public class Task_01 {
             QUERY = args[0];
             PARAMS = args[1];
         }
-        System.out.println(Answer.answer(QUERY, PARAMS));
+        System.out.println(answer(QUERY, PARAMS));
 
     }
-}
 
-class Answer {
+
     public static StringBuilder answer(String QUERY, String PARAMS) {
         StringBuilder sb = new StringBuilder(QUERY);
         String[] params = PARAMS.replaceAll("\"", "").split("[ {,}]");
