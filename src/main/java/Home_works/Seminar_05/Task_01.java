@@ -60,7 +60,7 @@ public class Task_01 {
         return map;
     }
     public static void printResult(Map<Integer, List<String>> text) {
-        for (int key = 1; key < text.size(); key++) {
+        for (int key = 1; key < text.size()+1; key++) {
             System.out.println(key + " -> " + text.get(key));
         }
     }
