@@ -15,6 +15,7 @@ public class Task_02 {
                 palindrome(
                         deleteSpaces(
                                 lowerString(text))));
+        scanner.close();
 
     }
 
