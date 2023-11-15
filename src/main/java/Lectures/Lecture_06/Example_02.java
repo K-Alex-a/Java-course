@@ -1,4 +1,4 @@
-package Seminars.Seminar_06;
+package Lectures.Lecture_06;
 import java.util.*;
 
 public class Example_02 {

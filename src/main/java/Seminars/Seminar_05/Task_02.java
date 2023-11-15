@@ -12,7 +12,7 @@ import java.util.Map;
 * abcde, aaaaa -> true
 * aaaaa, abcde -> false
 ===========================================*/
-public class Task_2 {
+public class Task_02 {
     public static void main(String[] args) {
         System.out.println(isIsomorphic("abc", "abc"));
         System.out.println(isIsomorphic("abc", "bce"));
